@@ -47,7 +47,8 @@ def set_age(self, age: int):
         self.__place_in_race = place
 
     def show_info(self):
-        place_str = f"{self.__place_in_race} місце" if self.__place_in_race else "ще не фінішував"
+        place_str = (f"{self.__place_in_race} місце"
+             if self.__place_in_race is not None else "ще не фінішував")
         print(f"Кінь: {self.__name} | Порода: {self.__breed} | Вік: {self.__age} р. | "
               f"Швидкість: {self.__speed} км/год | Результат: {place_str}")
 
