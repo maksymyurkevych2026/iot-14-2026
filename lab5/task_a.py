@@ -118,8 +118,9 @@ class Race:
         else:
             for horse in self.__participants:
                 horse.show_info()
-        print("-" * 55)
-def main():
+        class RaceHorse:
+    """Represents a race horse with private attributes."""
+    def __init__(...):
 
     derby = Race("Кубок Львова 2026")
     h1 = RaceHorse("Буцефал", 65.5, 5, "Арабська")
