@@ -1,11 +1,21 @@
 class RaceHorse:
 
     def __init__(self, name: str, speed: float, age: int, breed: str = "Чистокровна"):
-        self.__name = name
-        self.__speed = speed
-        self.__age = age
-        self.__breed = breed
-        self.__place_in_race = None
+    self.__name = name
+    self.__breed = breed
+    self.__place_in_race = None
+    self.set_speed(speed)
+    self.set_age(age)
+
+def set_speed(self, speed: float):
+    if speed <= 0:
+        raise ValueError("Speed must be positive")
+    self.__speed = speed
+
+def set_age(self, age: int):
+    if age <= 0:
+        raise ValueError("Age must be positive")
+    self.__age = age
 
     def __del__(self):
         print(f"[Log] Об'єкт коня '{self.__name}' видалено з пам'яті.")
