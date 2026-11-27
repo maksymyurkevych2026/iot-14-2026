@@ -62,7 +62,9 @@ class Race:
 
     def add_horse(self, horse: RaceHorse):
         if 3 <= horse.get_age() <= 7:
-            self.__participants.append(horse)
+            if any(h.get_name().lower() == horse.get_name().lower() for h in self.__participants):
+    print(f"Кінь {horse.get_name()} вже зареєстрований!")
+    return
             print(f"Кінь {horse.get_name()} (вік: {horse.get_age()}) успішно допущений до перегонів!")
         else:
             print(f"Відмова! Кінь {horse.get_name()} (вік: {horse.get_age()}) не підходить за віком (допускаються лише від 3 до 7 років).")
